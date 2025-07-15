@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: recomendaciones-backend
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node index.js
+    rootDir: backend
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://tic17sep:5fayYDByLqIk5w1z@cineversecluster.uqnyzoz.mongodb.net/cecyflix?retryWrites=true&w=majority
+      - key: OPENROUTER_API_KEY
+        value: <tu clave API de OpenRouter>
