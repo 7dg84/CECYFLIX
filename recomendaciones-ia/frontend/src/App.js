@@ -10,7 +10,7 @@ function App() {
 
     // Cargar películas al iniciar la app
     useEffect(() => {
-        fetch('/api/peliculas')
+        fetch('https://recomendaciones-backend-zx6r.onrender.com/api/peliculas')
             .then(res => res.json())
             .then(data => {
                 setPeliculas(data);
@@ -40,7 +40,7 @@ function App() {
 
     const handleBuscarPorDescripcion = async () => {
         try {
-            const res = await fetch('/api/recomendaciones', {
+            const res = await fetch('https://recomendaciones-backend-zx6r.onrender.com/api/recomendaciones', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
